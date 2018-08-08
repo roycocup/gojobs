@@ -1,0 +1,5 @@
+backend:
+    ☐ get list of job boards
+        ☐ split list into the ones that have api
+    ☐ scrape job boards
+    ☐ save info from each board into db
