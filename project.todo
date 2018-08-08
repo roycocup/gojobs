@@ -1,5 +1,15 @@
+pm:
+    ☐ write stories
+        ☐ approve tested stories
+
 backend:
     ☐ get list of job boards
         ☐ split list into the ones that have api
     ☐ scrape job boards
     ☐ save info from each board into db
+    ☐ update db when cache expires
+
+frontend:
+    ☐ display list
+        ☐ list is sorted by date
+        ☐ list can be limited by region
