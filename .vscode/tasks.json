@@ -5,6 +5,7 @@
     "tasks": [
         {
             "label": "Build & Run go",
+            "type": "shell",
             "command": "go build -o ./bin/app main.go && ./bin/app",
             "group": {
                 "kind": "build",
