@@ -1,11 +1,9 @@
 package lib
 
-import (
-	
-)
-
-type Config struct{}
+type Config struct {
+	Reader *Config
+}
 
 func (conf *Config) Read(configFileName string) {
-	
+
 }

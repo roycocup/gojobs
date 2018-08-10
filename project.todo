@@ -1,3 +1,6 @@
+General: 
+    
+
 pm:
     ☐ write stories
         ☐ approve tested stories
@@ -8,6 +11,8 @@ backend:
     ☐ scrape job boards
     ☐ save info from each board into db
     ☐ update db when cache expires
+    ☐ list all the job engines we need to use
+    ☐ get a list of all associated techologies and look for those words in the adverts
 
 frontend:
     ☐ display list
