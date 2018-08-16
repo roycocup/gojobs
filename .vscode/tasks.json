@@ -18,6 +18,12 @@
                 "isDefault": true
             },
             "problemMatcher": []
-        }
+        },
+        {
+            "label": "Test go",
+            "type": "shell",
+            "command": "go test",
+            "problemMatcher": []
+        },
     ]
 }

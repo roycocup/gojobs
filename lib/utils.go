@@ -9,6 +9,10 @@ Custom error class
 */
 type Error struct{}
 
+func NewErrorHelper() *Error{
+	return &Error{}
+}
+
 func (client *Error) Check(err error) {
 	if err != nil {
 		logrus.Warn(err.Error())

@@ -7,16 +7,19 @@ import (
 	"github.com/micro/go-config/source/file"
 )
 
-func main() {
-	log := logrus.New()
-	log.Info("Process started!")
+var (
+	conf config.Config
+	log *logrus.Logger
+	eChecker *lib.Error
+)
 
-	eChecker := lib.Error{}
+func main() {
+	log = logrus.New()
+	log.Info("Process started!")
+	eChecker = lib.NewErrorHelper()
 
 	// read config file
-	conf := config.NewConfig()
-	err := conf.Load(file.NewSource(file.WithPath("./config.yml")))
-	eChecker.Check(err)
+	loadConfig("./config.yml")
 
 	port := config.Get("site", "port").Int(9000)
 
@@ -25,4 +28,11 @@ func main() {
 	// serve http on separate thread
 	// init scrapers (one per source)
 	// save data
+}
+
+
+func loadConfig(configFile string){
+	conf = config.NewConfig()
+	err := conf.Load(file.NewSource(file.WithPath(configFile)))
+	eChecker.Check(err)
 }

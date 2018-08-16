@@ -1,11 +1,10 @@
 General: 
     
 
-pm:
-    ☐ write stories
-        ☐ approve tested stories
-
 backend:
+    ☐ serve http on separate thread
+	☐ init scrapers (one per source)
+	☐ save data
     ☐ get list of job boards
         ☐ split list into the ones that have api
     ☐ scrape job boards
