@@ -8,8 +8,8 @@ import (
 )
 
 var (
-	conf config.Config
-	log *logrus.Logger
+	conf     config.Config
+	log      *logrus.Logger
 	eChecker *lib.Error
 )
 
@@ -30,8 +30,7 @@ func main() {
 	// save data
 }
 
-
-func loadConfig(configFile string){
+func loadConfig(configFile string) {
 	conf = config.NewConfig()
 	err := conf.Load(file.NewSource(file.WithPath(configFile)))
 	eChecker.Check(err)
