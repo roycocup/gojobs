@@ -1,4 +1,4 @@
-package lib
+package server
 
 import (
 	"net/http"
@@ -8,9 +8,7 @@ import (
 	"github.com/Sirupsen/logrus"
 )
 
-type HTTPServer struct{}
-
-func (this *HTTPServer) Serve(port int) {
+func Serve(port int) {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		data, err := ioutil.ReadFile("web/index.html")
